@@ -7,3 +7,6 @@ const companies = [
     { name: "Spotify", marketValue: 30, CEO:"Daniel Ek", foundedOn: 2006},
     { name: "Apple", marketValue: 845, CEO:"Tim Cook", foundedOn: 1976}
 ]
+
+const SumMarketValue = companies.reduce((acc, current) => acc + current.marketValue, 0)
+console.log (SumMarketValue)
