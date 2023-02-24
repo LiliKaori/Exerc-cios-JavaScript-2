@@ -10,6 +10,17 @@ const list = [
     { name: "Julio", vip: false}
 ]
 
+const NewList = list.map(client =>{
+    const NewList = {
+        name: client.name,
+        vip: client.vip,
+        section: client.vip ? "black" : "green"
+    }
+    return NewList
+})
+
+console.log(NewList)
+
 //Exerc2: Transforme a lista abaixo substituindo a nota para resultado final (finalResult)
 //Se tirar nota de 7 para createImageBitmap, está aprovado
 
@@ -22,3 +33,14 @@ const students = [
     { name:"Ana", testGrade: 2},
     { name:"Julio", testGrade: 10},
 ]
+
+const NewStudents = students.map ( student =>{
+    const NewStudents = {
+        name: student.name,
+        finalResult: student.testGrade >= 7 ? "Aprovado" : "Reprovado"
+
+    }
+    return NewStudents
+})
+
+console.log (NewStudents)
